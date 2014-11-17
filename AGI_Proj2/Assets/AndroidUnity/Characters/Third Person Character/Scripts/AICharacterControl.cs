@@ -41,7 +41,7 @@ public class AICharacterControl : MonoBehaviour {
 		} else {
 
 			// We still need to call the character's move function, but we send zeroed input as the move param.
-			character.Move ( Vector3.zero, false, false, transform.position + transform.forward * 100 );
+			character.Move (Vector3.zero, false, false, transform.position + transform.forward * 100 );
 
 		}
 	}

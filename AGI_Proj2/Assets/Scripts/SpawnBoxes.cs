@@ -9,7 +9,7 @@ public class SpawnBoxes : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//InvokeRepeating (Method, Time, repeatRate);
-		InvokeRepeating ("SpawnBox", 1f, 2.5f);
+		InvokeRepeating ("SpawnBox", 1f, 2f);
 	}
 	
 	// Update is called once per frame
@@ -24,11 +24,11 @@ public class SpawnBoxes : MonoBehaviour {
 		float length = Random.Range (2, 10);
 		box.transform.localScale = new Vector3 (length, 0.1F, 2);
 
-		//Kill it 10 seconds after it spawns
+		//Destroy it 10 seconds after it spawns
 		Destroy (box, 10);
 
 		//Random position for next box
-		float height = Random.Range (-2.0f, 2.0f);
-		boxPosition += new Vector3 (6,height,0);
+		float ypos = Random.Range (-2.0f, 2.0f);
+		boxPosition += new Vector3 (7,ypos,0);
 	}
 }

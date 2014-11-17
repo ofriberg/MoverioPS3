@@ -68,6 +68,8 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	// The Move function is designed to be called from a separate component
 	// based on User input, or an AI control script
 	public void Move (Vector3 move, bool crouch, bool jump, Vector3 lookPos) {
+		//MOVE ALL THE TIME!!!
+		move = new Vector3 (1,0,0);
 
 		if (move.magnitude > 1) move.Normalize();
 
