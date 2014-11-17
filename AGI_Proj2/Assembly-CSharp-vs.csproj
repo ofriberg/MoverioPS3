@@ -71,6 +71,7 @@
      <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\TouchPadRelativePositional.cs" />
      <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\TouchPadSwipe.cs" />
      <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
      <None Include="Assets\AndroidUnity\Cross Platform Input\Cross Platform Input Guidelines.txt" />
      <None Include="Assets\AndroidUnity\Characters\Third Person Character\Third Person Character Guidelines.txt" />
      <None Include="Assets\AndroidUnity\Characters\First Person Character\First Person Character Guidelines.txt" />

@@ -1512,6 +1512,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 05c98027197f10d48b41ecd91f0e49f3, type: 2}
+      propertyPath: jumpPower
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05c98027197f10d48b41ecd91f0e49f3, type: 2}
   m_RootGameObject: {fileID: 1791182030}
@@ -3291,6 +3295,7 @@ GameObject:
   - 114: {fileID: 1791182034}
   - 114: {fileID: 1791182033}
   - 95: {fileID: 1791182032}
+  - 114: {fileID: 1791182038}
   m_Layer: 9
   m_Name: Third Person Character
   m_TagString: Player
@@ -3351,7 +3356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 10
+  jumpPower: 15
   airSpeed: 6
   airControl: 2
   gravityMultiplier: 2
@@ -3410,6 +3415,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 837545722}
   m_GameObject: {fileID: 1791182030}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1791182038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1791182030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f803df9196f8427e939271a79b86f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1798640087
 GameObject:
   m_ObjectHideFlags: 0
