@@ -61,6 +61,8 @@
      <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\JoystickAbstract.cs" />
      <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\MobileControlRig.cs" />
      <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\PlatformSpecific\Score.cs" />
+     <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\PlatformSpecific\SpawnBoxes.cs" />
      <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\PlatformSpecific\StandaloneInput.cs" />
      <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\TiltInput.cs" />
      <Compile Include="Assets\AndroidUnity\Cross Platform Input\Scripts\TouchJoystick.cs" />
