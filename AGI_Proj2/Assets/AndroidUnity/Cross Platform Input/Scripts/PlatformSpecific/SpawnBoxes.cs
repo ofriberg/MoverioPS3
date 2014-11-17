@@ -4,8 +4,7 @@ using System.Collections.Generic;
 
 public class SpawnBoxes : MonoBehaviour {
 	
-	public GameObject box;
-	Vector3 boxPosition = new Vector3(30,0,0);
+	Vector3 boxPosition = new Vector3(25,0,0);
 
 	// Use this for initialization
 	void Start () {
@@ -19,9 +18,17 @@ public class SpawnBoxes : MonoBehaviour {
 
 	//Spawn box x numbers in front of the player
 	void SpawnBox(){
-		//Instantiate (Object, Position, Rotation)
-		GameObject newbox = (GameObject)Instantiate(box, boxPosition, Quaternion.identity);
+		//create new box with random length
+		GameObject box = GameObject.CreatePrimitive(PrimitiveType.Cube);
+		box.transform.position = boxPosition;
+		float length = Random.Range (2, 10);
+		box.transform.localScale = new Vector3 (length, 0.1F, 2);
+
+		//Kill it 10 seconds after it spawns
+		Destroy (box, 10);
+
+		//Random position for next box
 		float height = Random.Range (-2.0f, 2.0f);
-		boxPosition += new Vector3 (7,height,0);
+		boxPosition += new Vector3 (6,height,0);
 	}
 }
