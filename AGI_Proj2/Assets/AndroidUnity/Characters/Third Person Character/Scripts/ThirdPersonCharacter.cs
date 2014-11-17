@@ -69,7 +69,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	// based on User input, or an AI control script
 	public void Move (Vector3 move, bool crouch, bool jump, Vector3 lookPos) {
 		//MOVE ALL THE TIME!!!
-		move = new Vector3 (1,0,0);
+		//move = new Vector3 (1,0,0);			AUTORUN-DEL
 
 		if (move.magnitude > 1) move.Normalize();
 
