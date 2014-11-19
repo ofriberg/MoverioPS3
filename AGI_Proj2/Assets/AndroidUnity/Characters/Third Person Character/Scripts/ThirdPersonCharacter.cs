@@ -10,7 +10,7 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	[SerializeField][Range(0.1f,3f)] float moveSpeedMultiplier = 1;	    // how much the move speed of the character will be multiplied by
 	[SerializeField][Range(0.1f,3f)] float animSpeedMultiplier = 1;	    // how much the animation of the character will be multiplied by
 	[SerializeField] AdvancedSettings advancedSettings;                 // Container for the advanced settings class , thiss allows the advanced settings to be in a foldout in the inspector
-
+	[SerializeField] bool autorun;
 
 	[System.Serializable]
 	public class AdvancedSettings
@@ -68,8 +68,11 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	// The Move function is designed to be called from a separate component
 	// based on User input, or an AI control script
 	public void Move (Vector3 move, bool crouch, bool jump, Vector3 lookPos) {
+
 		//MOVE ALL THE TIME!!!
-		move = new Vector3 (1,0,0);		//	AUTORUN-DEL
+		if (autorun) { 
+			move = new Vector3 (1,0,0);		//	AUTORUN-DEL
+				}
 
 		if (move.magnitude > 1) move.Normalize();
 
