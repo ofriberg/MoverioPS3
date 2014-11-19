@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: TestAreaYellow
+  m_Name: Water
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -17,19 +17,16 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 20c31f2f2992b457b9cb00e1d4a14d24, type: 3}
-          m_Scale: {x: 20, y: 5}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _BumpMap
-        second:
-          m_Texture: {fileID: 2800000, guid: 525fc4052f4034375b2acbf9e767dea7, type: 3}
-          m_Scale: {x: 20, y: 5}
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .977941155, g: .667697787, b: 0, a: 1}
+        second: {r: 0, g: .513184428, b: .647058845, a: 1}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: 0, g: .396551609, b: .5, a: 1}
