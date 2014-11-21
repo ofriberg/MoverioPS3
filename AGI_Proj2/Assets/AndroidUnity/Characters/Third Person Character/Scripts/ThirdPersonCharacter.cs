@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class ThirdPersonCharacter : MonoBehaviour {
+	public Vector3 RunSpeed;
+
 	[SerializeField] float jumpPower = 12;								// determines the jump force applied when jumping (and therefore the jump height)
 	[SerializeField] float airSpeed = 6;								// determines the max speed of the character while airborne
 	[SerializeField] float airControl = 2;								// determines the response speed of controlling the character while airborne
@@ -71,9 +73,11 @@ public class ThirdPersonCharacter : MonoBehaviour {
 
 		move = new Vector3 (runspeed,0,0);
 		//MOVE ALL THE TIME!!!
-//		if (autorun) { 
-//			move = new Vector3 (0.1f,0,0);		//	AUTORUN-DEL
-//		}
+
+		if (autorun) { 
+			move = RunSpeed;//new Vector3 (1,0,0);		//	AUTORUN-DEL
+		}
+
 
 		if (move.magnitude > 1) move.Normalize();
 
