@@ -24,7 +24,7 @@ public class HealthMeter : MonoBehaviour {
 		//}
 
 		if (fuel >= 0){
-		fuelmeter.transform.localScale = new Vector3 (fuel/100, 1, 1);
+			fuelmeter.transform.localScale = new Vector3 (fuel/100, 1, 1);
 		}
 		if (fuel <= 0){
 			fuelmeter.transform.localScale = new Vector3 (0, 1, 1);

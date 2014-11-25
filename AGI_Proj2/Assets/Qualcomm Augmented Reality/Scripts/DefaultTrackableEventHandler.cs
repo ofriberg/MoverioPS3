@@ -86,10 +86,15 @@ ITrackableEventHandler{
 			component.enabled = true;
 		}
 		
-		//Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+		Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
 		
+		//RUNFASTER, borde byta namn på trackablename sen
 		if (mTrackableBehaviour.TrackableName == "rut") {
-			PowerUp (2f);
+			PowerUp (0.6f);
+		}
+
+		if(mTrackableBehaviour.TrackableName == "TestBild"){
+			print ("TESTBILD");
 		}
 	}
 	
@@ -122,7 +127,7 @@ ITrackableEventHandler{
 			poweruptext.GetComponent<TextMesh> ().text = "POWERUP";
 		}
 		if(speed==preSetSpeed){
-			poweruptext.GetComponent<TextMesh> ().text = "";
+			poweruptext.GetComponent<TextMesh> ().text = " ";
 		}
 		player.GetComponent<ThirdPersonCharacter>().runspeed=speed;
 	}
