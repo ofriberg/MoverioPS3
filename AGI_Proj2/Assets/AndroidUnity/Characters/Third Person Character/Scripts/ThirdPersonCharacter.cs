@@ -2,13 +2,11 @@ using UnityEngine;
 using System.Collections;
 
 public class ThirdPersonCharacter : MonoBehaviour {
-	//public Vector3 RunSpeed;
-
 	[SerializeField] float jumpPower = 12;								// determines the jump force applied when jumping (and therefore the jump height)
 	[SerializeField] float airSpeed = 6;								// determines the max speed of the character while airborne
 	[SerializeField] float airControl = 2;								// determines the response speed of controlling the character while airborne
 	[Range(1,4)] [SerializeField] public float gravityMultiplier = 2;	// gravity modifier - often higher than natural gravity feels right for game characters
-	[SerializeField][Range(0.1f,3f)] float moveSpeedMultiplier = 1;	    // how much the move speed of the character will be multiplied by
+	public float moveSpeedMultiplier = 1;	    // how much the move speed of the character will be multiplied by
 	[SerializeField][Range(0.1f,3f)] float animSpeedMultiplier = 1;	    // how much the animation of the character will be multiplied by
 	[SerializeField] AdvancedSettings advancedSettings;                 // Container for the advanced settings class , thiss allows the advanced settings to be in a foldout in the inspector
 	public bool autorun;
@@ -71,12 +69,12 @@ public class ThirdPersonCharacter : MonoBehaviour {
 	// based on User input, or an AI control script
 	public void Move (Vector3 move, bool crouch, bool jump, Vector3 lookPos) {
 
-		move = new Vector3 (runspeed,0,0);
+		//move = new Vector3 (runspeed,0,0);
 		//MOVE ALL THE TIME!!!
 
-//		if (autorun) { 
-//			move = RunSpeed;//new Vector3 (1,0,0);		//	AUTORUN-DEL
-//		}
+		if (autorun) { 
+			move = new Vector3 (1,0,0);		//	AUTORUN-DEL
+		}
 
 
 		if (move.magnitude > 1) move.Normalize();

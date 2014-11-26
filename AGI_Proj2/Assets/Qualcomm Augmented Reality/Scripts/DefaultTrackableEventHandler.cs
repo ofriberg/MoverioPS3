@@ -14,20 +14,26 @@ ITrackableEventHandler{
 	
 	public GameObject poweruptext;
 	public ThirdPersonCharacter player;
-	float preSetSpeed;
+	EnemyDamage enemydamage;
+	//float speed;
+	
+	//POWERUPS - IDÉ: switch bools, externt powerups-script... ev. 
+	bool runfaster, immortal;
 	#region PRIVATE_MEMBER_VARIABLES
 	
 	private TrackableBehaviour mTrackableBehaviour;
 	
 	#endregion // PRIVATE_MEMBER_VARIABLES
-
+	
 	
 	#region UNTIY_MONOBEHAVIOUR_METHODS
 	
 	void Start()
 	{
 		//IDÉ: hämta in runspeed för att ha som variabel för hastigheten när trackable=lost
-		preSetSpeed = player.GetComponent<ThirdPersonCharacter>().runspeed;
+		//speed = player.GetComponent<ThirdPersonCharacter>().moveSpeedMultiplier;
+		
+		//enemydamage = player.GetComponent<EnemyDamage> ();
 		
 		mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 		if (mTrackableBehaviour)
@@ -88,13 +94,13 @@ ITrackableEventHandler{
 		
 		Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
 		
-		//RUNFASTER, borde byta namn på trackablename sen
+		//RUNFASTER, borde byta trackablename sen
 		if (mTrackableBehaviour.TrackableName == "rut") {
-			PowerUp (0.6f);
+			PowerUp ("runfaster", true);
 		}
-
+		
 		if(mTrackableBehaviour.TrackableName == "TestBild"){
-			print ("TESTBILD");
+			PowerUp("immortal", true);
 		}
 	}
 	
@@ -118,19 +124,35 @@ ITrackableEventHandler{
 		
 		//Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 		if (mTrackableBehaviour.TrackableName == "rut") {
-			PowerUp (preSetSpeed);
+			PowerUp ("runfaster", false);
+		}
+		if(mTrackableBehaviour.TrackableName == "TestBild"){
+			PowerUp("immortal", false);
 		}
 	}
 	
-	void PowerUp(float speed){
-		if(speed>preSetSpeed){
-			poweruptext.GetComponent<TextMesh> ().text = "POWERUP";
+	void PowerUp(string power, bool powerup){
+		//RUN FASTER
+		if(power.Equals("runfaster") && powerup){
+			poweruptext.GetComponent<TextMesh> ().text = "RUN FASTER";
+			//player.GetComponent<ThirdPersonCharacter>().moveSpeedMultiplier=2;
 		}
-		if(speed==preSetSpeed){
-			poweruptext.GetComponent<TextMesh> ().text = " ";
+		if(power.Equals("runfaster") && !powerup){
+			poweruptext.GetComponent<TextMesh> ().text = "";
+			//player.GetComponent<ThirdPersonCharacter>().moveSpeedMultiplier=1;
 		}
-		player.GetComponent<ThirdPersonCharacter>().runspeed=speed;
+		
+		//IMMORTAL
+		if(power.Equals ("immortal") && powerup){
+			poweruptext.GetComponent<TextMesh> ().text = "IMMORTAL";
+			//enemydamage.enabled=false;
+		}
+		if (power.Equals ("immortal") && !powerup) {
+			poweruptext.GetComponent<TextMesh> ().text = "";
+			//enemydamage.enabled=true;	
+		}
 	}
 	
 	#endregion // PRIVATE_METHODS
 }
+
