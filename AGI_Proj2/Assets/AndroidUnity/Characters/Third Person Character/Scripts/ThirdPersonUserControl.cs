@@ -35,7 +35,7 @@ public class ThirdPersonUserControl : MonoBehaviour {
 		bool crouch = Input.GetKey(KeyCode.C);
 
 		#if CROSS_PLATFORM_INPUT
-		bool jump = Input.GetMouseButton(0);
+		bool jump = Input.GetButton("Jump");//Input.GetMouseButton(0);
 		float h = CrossPlatformInput.GetAxis("Horizontal");
 		float v = CrossPlatformInput.GetAxis("Vertical");
 		#else
