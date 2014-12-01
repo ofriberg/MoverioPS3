@@ -5771,7 +5771,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1038582198}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b867d81e9107b4a2b80e514e187ec2da, type: 3}
+  m_Script: {fileID: 11500000, guid: fd0b91da7aa85ca49989f52670753f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boxPosition: {x: 25, y: 0, z: 0}
@@ -5808,7 +5808,6 @@ MonoBehaviour:
   - {fileID: 682015740}
   - {fileID: 851284257}
   - {fileID: 168354865}
-  coinPrefab: {fileID: 100000, guid: 0741311598053944fb8fc9caf065dd1f, type: 2}
   n: 0
   m: 0
 --- !u!4 &1038582200
