@@ -46,8 +46,8 @@ public class NetworkManager : MonoBehaviour {
 	
 	void OnServerInitialized(){
 		Debug.Log ("Initialized Server");
-		
-		SpawnPlayer ();
+		GameObject.Find ("Spawner").GetComponent<spawnBoardwalk> ().enabled = true;
+		//SpawnPlayer ();
 	}
 	
 	void OnConnectedToServer() {

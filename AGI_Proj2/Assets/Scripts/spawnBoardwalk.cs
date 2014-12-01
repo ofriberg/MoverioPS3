@@ -8,16 +8,20 @@ public class spawnBoardwalk : MonoBehaviour {
 	public bool spawnCoins = true;
 	
 	public List<GameObject> boardwalk;
+	public List<GameObject> coins;
+//	public GameObject boardPrefab;
+	public GameObject coinPrefab;
 //	public List<GameObject> purse;
 	public int n = 0;		//Board counter
+	public int m = 0;		//Coin counter
 
 	// Use this for initialization
 	void Start () {
 
 		// Pool of 5 boards
-		for(int i = 0; i < 5; i++){ 
-			boardwalk.Add(GameObject.CreatePrimitive(PrimitiveType.Cube));
-		}
+		//for(int i = 0; i < 5; i++){ 
+		//	boardwalk.Add((GameObject)Instantiate(boardPrefab));
+		//}
 
 		//		for (int j = 0; j<15; j++){
 //			purse.Add(Instantiate (GameObject.Find ("Coin")));
@@ -50,10 +54,15 @@ public class spawnBoardwalk : MonoBehaviour {
 		if (spawnCoins) {
 			Vector3 coinPosition = boxPosition - new Vector3 (board.transform.localScale.x / 2 + margin, -1, 0);
 			
+			Network.RemoveRPCsInGroup(0);
 			for (int i = 0; i < amountCoins; i++) {
 				coinPosition += new Vector3 (splitBoxWidth, 0, 0);
-				Object coin = Instantiate (GameObject.Find ("Coin"), coinPosition, Quaternion.identity);
-				Destroy (coin, 10);
+				GameObject coin = coins[m];
+				coin.transform.position = coinPosition;
+				coin.GetComponent<MeshRenderer>().enabled = true;
+				//Object coin = Network.Instantiate (coinPrefab, coinPosition, Quaternion.identity, 0);
+				//Network.Destroy (coin, 10);
+				m = (m + 1) % coins.Count;
 			}
 		}
 		

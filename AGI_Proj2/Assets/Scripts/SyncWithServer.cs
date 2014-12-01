@@ -20,8 +20,8 @@ public class SyncWithServer : MonoBehaviour {
 	void SynchedMovement() {
 		syncTime += Time.deltaTime;
 		float lerpTime = syncTime / syncDelay;
-		gameObject.transform.position = Vector3.Lerp (syncStartPos, syncEndPos, syncTime / syncDelay);
-		gameObject.transform.rotation = Quaternion.Lerp (syncStartRot, syncEndRot, syncTime / syncDelay);
+		gameObject.transform.position = Vector3.Lerp (syncStartPos, syncEndPos, lerpTime);
+		gameObject.transform.rotation = Quaternion.Lerp (syncStartRot, syncEndRot, lerpTime);
 	}
 
 	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info) {
