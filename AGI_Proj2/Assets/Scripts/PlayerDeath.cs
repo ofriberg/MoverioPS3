@@ -3,12 +3,12 @@ using System.Collections;
 
 public class PlayerDeath : MonoBehaviour {
 
-	spawnBoardwalk spawnscript;
+	spawnBoardWalkPooledCoins spawnscript;
 
 	public bool dead = false;
 	// Use this for initialization
 	void Start () {
-		spawnscript = GameObject.Find ("Spawner").GetComponent<spawnBoardwalk> ();
+		spawnscript = GameObject.Find ("Spawner").GetComponent<spawnBoardWalkPooledCoins> ();
 	}
 	
 	// Update is called once per frame
