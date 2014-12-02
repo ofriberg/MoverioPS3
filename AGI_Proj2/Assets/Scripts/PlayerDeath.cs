@@ -5,17 +5,15 @@ public class PlayerDeath : MonoBehaviour {
 
 	spawnBoardwalk spawnscript;
 
+	public bool dead = false;
 	// Use this for initialization
 	void Start () {
-//		System.GC.Collect();
-//		System.GC.WaitForPendingFinalizers();
-//		Resources.UnloadUnusedAssets ();
 		spawnscript = GameObject.Find ("Spawner").GetComponent<spawnBoardwalk> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y < -80) 
+		if (transform.position.y < -80 || dead ) 
 		{
 			//Application.LoadLevel(Application.loadedLevel);
 
@@ -23,6 +21,7 @@ public class PlayerDeath : MonoBehaviour {
 			transform.position = new Vector3(0f,0f,0f);
 			GetComponent<Score>().points = 0;
 			spawnscript.boxPosition = new Vector3(25,0,0);
+			dead = false;
 
 		}
 	}
