@@ -3794,7 +3794,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400004, guid: 05c98027197f10d48b41ecd91f0e49f3, type: 2}
       propertyPath: autorun
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05c98027197f10d48b41ecd91f0e49f3, type: 2}
@@ -6966,7 +6966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mTrackableName: QR24bit
-  mPreviousScale: {x: 14.1451645, y: 14.1451645, z: 14.1451645}
+  mPreviousScale: {x: 14.1451616, y: 14.1451616, z: 14.1451616}
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mDataSetPath: QCAR/QR24bit.xml
@@ -7817,7 +7817,7 @@ MonoBehaviour:
     jumpRepeatDelayTime: .25
     runCycleLegOffset: .200000003
     groundStickyEffect: 5
-  autorun: 1
+  autorun: 0
   runspeed: 0
 --- !u!54 &1791182035
 Rigidbody:
