@@ -47,9 +47,9 @@ EditorBuildSettings:
     path: Assets/Sample Assets/Sample Scenes/Scenes/Third Person Character.unity
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/2D Character.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main.unity
   - enabled: 0
     path: Assets/Scenes/MoverioQR.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NetworkScene.unity
