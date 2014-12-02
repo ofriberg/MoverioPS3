@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class spawnBoardwalkPooledCoins : MonoBehaviour {
+public class spawnBoardWalkPooledCoins : MonoBehaviour {
 	
 	public Vector3 boxPosition = new Vector3(25,0,0);
 	public bool spawnCoins = true;

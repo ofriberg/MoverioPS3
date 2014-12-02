@@ -46,7 +46,7 @@ public class NetworkManager : MonoBehaviour {
 	
 	void OnServerInitialized(){
 		Debug.Log ("Initialized Server");
-		GameObject.Find ("Spawner").GetComponent<spawnBoardwalkPooledCoins> ().enabled = true;
+		GameObject.Find ("Spawner").GetComponent<spawnBoardWalkPooledCoins> ().enabled = true;
 		//SpawnPlayer ();
 	}
 	
