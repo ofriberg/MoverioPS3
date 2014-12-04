@@ -33,3 +33,4 @@ ehthumbs.db
 Thumbs.db
 
 ProjectSettings/QualitySettings.asset
+*.meta
